@@ -15,8 +15,16 @@ public class Sine implements Operator {
         amplitude = 1;
         samples = new double[44000];
 
-        for(int i = 0; i < samples.length; i++) {
+        for(int i = 0; i < samples.length; i++){
             samples[i] = amplitude * Math.sin(((i * Math.PI * freq)/ samples.length) );
+        }
+    }
+    public Sine(double[] samples) {
+        freq = 440;
+        amplitude = 1;
+
+        for(int i = 0; i < samples.length; i++) {
+            samples[i] = Math.sin(samples[i]);
         }
     }
 
