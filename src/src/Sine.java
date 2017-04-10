@@ -24,7 +24,7 @@ public class Sine implements Operator {
         amplitude = 1;
 
         for(int i = 0; i < samples.length; i++) {
-            samples[i] = amplitude * Math.sin(((i * Math.PI * freq)/ samples.length) );
+            samples[i] = Math.sin(samples[i]);
         }
     }
 
