@@ -14,7 +14,7 @@ public class Sine implements Operator {
         waveform = new double[44000];
 
         for(int i = 0; i < waveform.length; i++) {
-            waveform[i] = amplitude * Math.sine((i / waveform.length) * Math.PI);
+            waveform[i] = amplitude * Math.sin((i / waveform.length) * Math.PI);
         }
     }
 
