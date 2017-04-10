@@ -16,7 +16,7 @@ public class Sawtooth implements Operator {
         amplitude = 1;
         samples = new double[44100];
 
-        for(int i = 0; i < samples.length; i++) {
+        for(int i = 0; i < samples.length; i++) { //not right
             if (i % 2 == 0) {
                 samples[i] = 1;
             } else {
