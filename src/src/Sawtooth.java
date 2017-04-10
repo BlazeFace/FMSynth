@@ -17,7 +17,11 @@ public class Sawtooth implements Operator {
         samples = new double[44100];
 
         for(int i = 0; i < samples.length; i++) {
-            samples[i] =
+            if (i % 2 == 0) {
+                samples[i] = 1;
+            } else {
+                samples[i] = -1;
+            }
         }
     }
 
