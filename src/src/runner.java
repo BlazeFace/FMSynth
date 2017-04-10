@@ -4,13 +4,18 @@ import javax.swing.JOptionPane;
 
 public class runner {
     public static void main(String[] args){
-    String[] operators = {"Sine","Sawtooth"};
+    String[] operators = {"Sin","Sawtooth"};
         String input = (String) JOptionPane.showInputDialog(null, "Choose now...",
-                "The Choice of a Lifetime", JOptionPane.QUESTION_MESSAGE, null, // Use
+                "FMSynth", JOptionPane.QUESTION_MESSAGE, null, // Use
                 // default
                 // icon
                 operators, // Array of choices
                 operators[1]); // Initial choice
-        System.out.println(input);
+        switch(input){
+            case("Sin"):{Sine a = new Sine();
+            int i = 0;
+            while(i < 20){StdAudio.play(a.getSamples()); i++;}
+            System.out.print("Hello");break;}
+        }
     }
 }
