@@ -16,7 +16,7 @@ public class runner {
         }
         Sine t = new Sine(a.getSamples());
         StdAudio.play(a.getSamples());
-        StdAudio.play(t.getSamples());
+        //StdAudio.play(t.getSamples());
     }
 }
 
