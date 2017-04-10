@@ -20,4 +20,5 @@ public class Sine implements Operator {
 
     public double getFreq() { return freq; }
     public double getAmplitude() { return amplitude; }
+    public double[] getSamples() { return waveform; }
 }
