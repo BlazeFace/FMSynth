@@ -17,4 +17,7 @@ public class Sine implements Operator {
             waveform[i] = amplitude * Math.sine((i / waveform.length) * Math.PI);
         }
     }
+
+    public double getFreq() { return freq; }
+    public double getAmplitude() { return amplitude; }
 }
