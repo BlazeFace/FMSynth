@@ -9,29 +9,14 @@ public class runner {
                 JOptionPane.QUESTION_MESSAGE, null,
                 operators, operators[1]);
         Operator a;
-        Operator t;
-        Operator b;
-        switch(input) {
-            case ("Sine"): {
-                a = new Sine(100);
-                break;
-            }
-            //case("Sawtooth"):{a = new Sawtooth();int i = 0;break;}
-            default: {
-                a = new Sine(440);
-                t = new Sine(440);
-                b = new Sine(440);
-            }
+        switch(input){
+            case("Sine"):{a = new Sine();break;}
+            case("Sawtooth"):{a = new Sawtooth();int i = 0;break;}
+            default:{a = new Sine();}
         }
-        int i = 0;
-        double freq = 5;
-        while(i < 10){
-            freq -= 10;
-            //StdAudio.play(b.getSamples()); i++;
-            }
-        //a.changeFreq(30);
-        //StdAudio.play(a.getSamples());
-
+        Sine t = new Sine(a.getSamples());
+        StdAudio.play(a.getSamples());
+        //StdAudio.play(t.getSamples());
     }
 }
 
