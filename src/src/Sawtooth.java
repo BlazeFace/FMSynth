@@ -5,7 +5,7 @@ import java.lang.Math;
  * of a sawtooth.
  * with help from princeton edu
  */
-public class Sawtooth implements Operator {
+public class Sawtooth  {
     private double[] samples;
     private double freq;
     private double amplitude;
