@@ -10,12 +10,12 @@ public class runner {
                 operators, operators[1]);
         Operator a;
         switch(input){
-          //  case("Sine"):{a = new Sine();break;}
-           // case("Sawtooth"):{a = new Sawtooth();int i = 0;break;}
-          //  default:{a = new Sine();}
+            //case("Sine"):{a = new Sine();break;}
+            //case("Sawtooth"):{a = new Sawtooth();int i = 0;break;}
+            //default:{a = new Sine();}
         }
-      //  Sine t = new Sine(a.getSamples());
-     //   StdAudio.play(a.getSamples());
+        //Sine t = new Sine(a.getSamples());
+        //StdAudio.play(a.getSamples());
         //StdAudio.play(t.getSamples());
     }
 }
