@@ -1849,7 +1849,7 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 
 
     /**
-     * Test client.
+     * AudioPlayer client.
      *
      * @param args the command-line arguments
      */
