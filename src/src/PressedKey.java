@@ -1,5 +1,6 @@
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.BlockingQueue;
 
 /**
  * Updates if the key is pressed
@@ -15,13 +16,19 @@ public class PressedKey implements Runnable{
         this.keys = keys;
         this.keycode = key;
     }
-    private void press(){
+    public void press(){
         if(StdDraw.isKeyPressed(this.keycode)){
             this.isPressed = true;
             //System.out.println(this.keys);
             StdDraw.clear();
             StdDraw.text(.5,.5, ""+this.keys);
 
+            try {
+                AudioPlayer.queue.put(this.keycode);
+            }
+            catch (Exception e){
+                System.out.print("hel");
+            }
         }
     }
     public int getKey(){return this.keycode;}
