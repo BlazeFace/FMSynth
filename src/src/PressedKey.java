@@ -18,9 +18,13 @@ public class PressedKey implements Runnable{
     private void press(){
         if(StdDraw.isKeyPressed(this.keycode)){
             this.isPressed = true;
-            System.out.println(this.keys);
+            //System.out.println(this.keys);
+            StdDraw.clear();
+            StdDraw.text(.5,.5, ""+this.keys);
+
         }
     }
+    public int getKey(){return this.keycode;}
     public void run() {
        Timer time = new Timer();
         TimerTask key = new TimerTask() {
