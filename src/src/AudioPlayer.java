@@ -23,9 +23,9 @@ public class AudioPlayer implements Runnable{
         return queue;
     }
     private void mod(int freq){
-        c.changeFreq(freq);
-        b.changeFreq(freq + 100);
-        a.changeFreq(freq / 2);
+        c.changeFreq(freq / 3);
+        b.changeFreq(freq + 10);
+        c.changeFreq(freq + 5);
         b.modulate(c.getSamples());
         a.modulate(b.getSamples());
     }
@@ -35,28 +35,38 @@ public class AudioPlayer implements Runnable{
             int i = 0;
             while ((msg = queue.poll()) != null) {
                 if (msg == 65) {
-                    mod(200);
+                    mod(50);
                     System.out.print("a ");
-                    StdAudio.play(a.getSamples());
-
+                    for(int j = 0; j < 100; j++) {
+                        StdAudio.play(a.getSamples()[j]);
+                    }
                     }
                 if (msg == 87) {
-                    mod( 400);
+                    mod( 75);
                     System.out.print("w ");
-                    StdAudio.play(a.getSamples());
+
+                    for(int j = 0; j < 100; j++) {
+                        StdAudio.play(a.getSamples()[j]);
+                    }
                 }
                 if (msg == 83) {
-                    mod(600);
+                    mod(100);
                     System.out.print("s ");
-                    StdAudio.play(a.getSamples());
+                    for(int j = 0; j < 100; j++) {
+                        StdAudio.play(a.getSamples()[j]);
+                    }
                 }
                 if (msg == 68) {
-                    mod(800);
+                    mod(125);
                     System.out.print("d ");
-                    StdAudio.play(a.getSamples());
+                    for(int j = 0; j < 100; j++) {
+                        StdAudio.play(a.getSamples()[j]);
+                    }
                 }
                     }
-            //System.out.print("NULL");
+            for(int j = 0; j < 100; j++) {
+                StdAudio.play(a.getSamples()[j]);
+            }
                 }
             }
 

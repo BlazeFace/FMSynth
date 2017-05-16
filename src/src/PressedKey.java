@@ -40,6 +40,6 @@ public class PressedKey implements Runnable{
                 press();
             }
         };
-        time.schedule(key, 10, 10);
+        time.schedule(key, 1, 20);
     }
 }
